@@ -1,0 +1,144 @@
+ls
+history
+cd $$
+echo $$
+echo $HOME
+echo $$
+
+
+echo $$
+
+echo $$
+
+echo hi
+echo $$
+echo $$
+ls
+pwd
+cd ~
+pwd
+cd
+pwd
+echo $HOME
+cd ~
+pwd
+mkdir te
+cd te
+cd ~
+pwd
+cd ~
+pwd
+echo hi>tt.txt
+ls
+cat tt.txt
+echo hi>ttt.txt
+vi ttt.txt
+echo hi>hj.txt
+vi hj.txt
+echo hi>hjhj.txt
+vi hjhj.txt
+ls
+echo "hi">mmm.txt
+cat mmm.txt
+ls
+echo hrllo>>mmm.txt
+cat mmm.txt
+echo "hello">>mmm.txt
+cat mmm.txt
+cat mmm.txt
+echo hi >>mmm.txt
+cat mmm.txt
+echo "hi">mmm.txt
+cat mmm.txt
+echo hi>>mmm.txt
+cat mmm.txt
+echo hi>>uey.txt
+cat uey.txt
+echo hi>>uey.txt
+cat uey.txt
+ls
+echo hi>>mmm.txt
+cat mmm.txt
+grep hi mmm.txt|wc -l>mmmm.txt
+cat mmmm.txt
+
+cat mmmm.txt
+
+ls
+grep hi | wc -l>mmmmm.txt
+ls
+grep hi mmm.txt|wc -l>mmmmm.txt
+grep hi mmm.txt | wc -l>mmmmm.txt
+grep hi mmm.txt|wc -l>mmmmm.txt
+grep hi mmm.txt|wc -l|>mmmmm.txt
+ 3 mmm.txt
+ 3 total
+cat mmm.txt
+grep hi | wc -l>mmmmm.txt
+grep hi mmm.txt|wc -l>mmmmm.txt
+grep hi mmm.txt|wc -l>mmmmm.txt
+cat mmmmm.txt
+grep hi mmm.txt|wc -l>mmmmmm.txt
+ls
+grep hi mmm.txt|wc -l>err.txt
+ls
+grep hi mmm.txt|lc -l>ww.txt
+"hi"
+hi
+hi
+hi
+hi
+hi
+hi
+
+ls
+grep hi mmm.txt|wc -l>mmmmmmm.txt
+ls
+grep hi mmm.txt>mmmmmmmm.txt
+cat mmmmmmmm.txt
+grep hi mmm.txt|wc -l|mmmmmmmm.txt
+3
+cat mmmmmmmm.txt
+ls
+grep hi mmm.txt|wc -l>mmmmmmmmmm.txt
+cat mmmmmmmmmm.txt
+
+grep hi mmm.txt|wc -l>mmmmmmmmmmmm.txt
+grep hi mmm.txt|wc -l>mmmmmmmmmmmmm.txt
+grep hi mmm.txt|wc -l>mmmmmmmmmmmmmm.txt
+grep hi mmm.txt|wc -l>mmmmmmmmmmmmmm.txt
+grep hi mmm.txt|wc -l>mmmmmmmmmmmmmmmmmmmm.txt
+grep hi mmm.txt|wc -l>mmmmmmmmmmmmmmmmmmmmmm.txt
+cat mmmmmmmmmmmmmmmmmmmmmm.txt
+cat mmmmmmmmmmmmmmmmmmmmmm.txt
+grep hi mmm.txt|wc -l>>mmmmmmmmmmmmmmmmmmmmmmmmmmm.txt
+grep hi mmm.txt|wc -l>1.txt
+cat 1.txt
+grep hi mmm.txt|wc -l>2.txt
+cat 2.txt
+
+grep hi mmm.txt|wc -l>3.txt
+cat 3.txt
+
+grep hi mmm.txt|wc -l>>3.txt
+grep hi mmm.txt|wc -l>3.txt
+cat 3.txt
+
+grep hi mmm.txt|wc -l>4.txt
+cat 4.txt
+
+grep hi mmm.txt|wc -l>>4.txt
+ls -al | grep Aug | grep -v '200[456]' | more
+ls -al | grep Sep | more
+
+
+echo hi
+echo hi
+echo $HOME
+ls
+ls -al
+ls
+pwd
+echo hi
+history
+exit
