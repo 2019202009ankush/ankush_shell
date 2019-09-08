@@ -142,3 +142,103 @@ pwd
 echo hi
 history
 exit
+alias ll=ls -lrt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+alias ll=ls -art
+
+
+
+
+alias ll=ls -lrt
+ls
+alias ll=ls
+ll
+alias ll=ls -lrt
+ll
+alias ll=ls
+ll
+alias ll=ls -lrt
+ll
+ls
+alias ll=ls -lrt
+ll
+alias ll=ls -lrt
+alias ll=ls -lrt
+ll
+ls
+alias ll=ls -lrt
+ll
+ls
+ls
+alias ll=ls -lrt
+ll
+alias ll=ls -lrt
+alias ll=ls -lrt
+alias ll=ls -lrt
+alias ll=ls -lrt
+alias ll=ls -lrt
+
+ls -lrtls
+alias ll=ls
+lsls
+alias ll=ls -lrt
+ll
+alias lp=ll
+lp
+ls
+alias ll=ls -lrt
+ls -lrtalias lp=ls
+lsalias ll=ls
+lsls
+alias lp=ls
+lsls
+alias lp=ls
+lsalias lp=ls
+lsalias lp=ll
+llls
+ls
+ls
+alias lp=ls
+lsls
+alias lp=ls
+lsalias lp=ls
+ls
+lsalias ll=ls -lrt
+ls -lrtls
+alias lp=ll
+ll alias h=ls -lrt
+ls -lrt ls -lrtls
+alias hh=ls -lrt
+ls -lrtalias mm=ls
+lsalias mmm=ls -lrt
+ls -lrtls
+alias lp=ls -lrt
+ls -lrtls
+alias ll=ls -lrt
+ls -lrtalias ll=ls -lrt
+ls -lrtalias ll=ls
+ls 
+ll 
+alias h=ls -lrt
+ls -lrtls
+alias lp=ls
+ls g++ ashell.cpp
+ls
+alias mm=ls
+ls 

@@ -14,6 +14,7 @@
 #include "ioredirect.h"
 #include "pipe_imp.h"
 #include "bashrc.h"
+#include <bits/stdc++.h>
 using namespace std;
 char global[10000];
 void prints()
@@ -28,6 +29,8 @@ void prints()
 }
 int main()
 {
+    map<string,string>mm;
+    map<string,string>:: iterator it1;
     getcwd(global,sizeof(global));
     setrc();
     const char * h=getenv("HOME");
@@ -35,15 +38,45 @@ int main()
     char command[10000];  
     while(fgets(command,10000,stdin)!=NULL)
 	{
+          /* for(it1=mm.begin();it1!=mm.end();it1++)
+            cout<<"map element size"<<it1->first<<" "<<it1->second;*/
+
             char *temp;
             char *temstring[10000];
-            int len=strlen(command);
+            string bk="";
+            for(int i=0;i<strlen(command)-1;i++)
+              bk=bk+command[i];
+           /* if(bk[strlen(command)-1]==' ')
+                 bk[strlen(command)-1]='\0';*/
+            //bk=bk+"\0";
+            //cout<<"bk size ="<<bk<<endl;
+            if(mm.find(bk)!=mm.end())
+            {
+            // cout<<"guiy"<<endl;
+             
+              string df=mm[bk];
+              // cout<<df<<" "<<df.size();
+             df=df+" ";
+             int i;
+            for(i=0;i<=df.size();i++)
+             {
+              command[i]=df[i];
+             }
             
+              //cout<<"command ="<<command<<"command size="<<strlen(command)<<endl;
+            }
+            int len=strlen(command);
+            // cout<<"command ="<<command<<"command size="<<strlen(command)<<endl;
             FILE * fp= fopen("log.txt","a+");
             fputs(command,fp);
             fclose(fp);
+           /* if(command[strlen(command)-1]!=' '||command[strlen(command)-1]!='\0')
+             command[strlen(command)]='\0';*/
+           
+          // cout<<"check2"<<command[strlen(command)-1]<<endl;
            
             command[strlen(command)-1]='\0';
+           // cout<<"check"<<command<<endl;
             if(strstr(command,"history"))
             {FILE *fp=fopen("log.txt","r");
                 if (fp!= NULL)
@@ -181,6 +214,24 @@ int main()
                 }
                 mp(temstring,i-1);
            }
+         else if(strstr(command,"alias"))
+         {
+            char * r=strtok(command,"=");
+            char * r1=strtok(NULL,"=");
+            temp=strtok(r," ");
+            temp=strtok(NULL," ");
+            char* s=temp;
+            string ss="";
+            string sss="";
+            for(int i=0;i<strlen(s);i++)
+            ss=ss+s[i];
+            for(int i=0;i<strlen(r1);i++)
+            sss=sss+r1[i];
+              mm[ss]=sss;
+            //cout<<sss<<endl;
+            goto l2;
+         }
+
           
            else
            {if(!strstr(command,"exit")&&!strstr(command,"history")&&!strstr(command,"cd"))
