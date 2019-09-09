@@ -241,4 +241,64 @@ alias lp=ls
 ls g++ ashell.cpp
 ls
 alias mm=ls
-ls 
+ls ls
+echo hi>m.txt
+cat m.txt
+echo bye>>m.txt
+cat m.txt
+ls
+echo ch>>m.txt
+cat m.txt
+ls
+echo hi>mm.txt
+cat mm.txt
+echo chh>>mm.txt
+cat mm.txt
+ls
+echo hi>mmm.txt
+cat mmm.txt
+echo hgkdhg>>mmm.txt
+cat mmm.txt
+ls
+grep hi mmm.txt|wc -l>mmmm.txt
+cat mmmm.txt
+
+cat mmm.txt
+ls
+rm mmm.txt mmmm.txt m.txt mm.txt
+ls
+rm basic.h
+ls
+ls
+ls -l|grep sep>mmmmm.txt
+cat mmmmm.txt
+ls -l|grep sep
+ls -l
+
+ls -l|grep Sep
+
+ls -l|grep Sep>mmmmm.txt
+cat mmmmm.txt
+
+ls -l|grep Sep>>mmmmm.txt
+ls -l|grep Sep
+ls
+cat mmmmm.txt
+ls
+cal
+la
+ls
+echo hi>nm.txt
+cat nm.txt
+ls
+alias lp=ls
+ls ls -l|grep Sep
+ls
+echo hi>mmmmm.txt
+cat mmmmm.txt
+ls
+echo hi>mmmm.txt
+cat mmmm.txt
+ls
+history
+exit

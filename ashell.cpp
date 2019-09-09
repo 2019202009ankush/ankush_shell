@@ -10,7 +10,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <ctype.h>
-#include "basic.h"
+#include "ex.h"
 #include "ioredirect.h"
 #include "pipe_imp.h"
 #include "bashrc.h"
@@ -35,12 +35,12 @@ int main()
     setrc();
     const char * h=getenv("HOME");
     prints();
-    char command[10000];  
-    while(fgets(command,10000,stdin)!=NULL)
+    char * command  =new char[10000];  
+    for(;;)
 	{
           /* for(it1=mm.begin();it1!=mm.end();it1++)
             cout<<"map element size"<<it1->first<<" "<<it1->second;*/
-
+            if(fgets(command,10000,stdin)==NULL) break;
             char *temp;
             char *temstring[10000];
             string bk="";
@@ -65,7 +65,7 @@ int main()
             
               //cout<<"command ="<<command<<"command size="<<strlen(command)<<endl;
             }
-            int len=strlen(command);
+            
             // cout<<"command ="<<command<<"command size="<<strlen(command)<<endl;
             FILE * fp= fopen("log.txt","a+");
             fputs(command,fp);
@@ -158,7 +158,7 @@ int main()
                     temstring[i-1]=hg;
                     hg=strtok(NULL,">>");
                     ss=hg;
-                    outputpipedual(temstring,ss,i-1);
+                    outputpipe(temstring,ss,i-1);
                     goto l2;
                
            }
@@ -237,7 +237,7 @@ int main()
            {if(!strstr(command,"exit")&&!strstr(command,"history")&&!strstr(command,"cd"))
                  {
                          temstring[0]=command;
-                         BasicEx(temstring[0]);
+                         Ex(temstring[0]);
                          goto l2;
                  }
            }

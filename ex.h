@@ -1,11 +1,12 @@
 #include "myheader.h"
-int BasicEx(char *strin)
+int Ex(char *strin)
 {int count=1,st;
     char *temp=strtok(strin," ");
-    char *command[100];
+    char *command[1000];
     command[0]=temp;
-    while(temp!=NULL)
-    {
+   for(;;)
+  {
+  if(temp==NULL) break;
 temp=strtok(NULL," ");
         if(temp==NULL)
             break;

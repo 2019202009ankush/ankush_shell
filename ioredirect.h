@@ -1,68 +1,68 @@
 
-int outp(char *str1,char *str2)
+void outp(char *str1,char *str2)
 {
-    int i=1,st;
+    int count=1,st;
     char *temp=strtok(str1," ");
-    char *command[100];
+    char *command[1000];
     command[0]=temp;
 //cout<<"befor1"<<" "<<str1<<" "<<str2<<endl;
-    while(temp!=NULL)
+    for(; ;)
     {
+        if(temp==NULL) break;
         temp=strtok(NULL," ");
         if(temp==NULL)
             break;
-        command[i]=temp;
-        i++;
+        command[count]=temp;
+        count++;
     }
-    command[i]=NULL;
-    char *dest=str2;
-    //cout<<dest<<endl;
-    int out;
+    command[count]=NULL;
+    
+    int op;
     int f = fork();
     //cout<<"befor"<<endl;
-    out = open(dest, O_WRONLY | O_TRUNC | O_CREAT|O_APPEND,0777);
+    op = open(str2, O_WRONLY | O_TRUNC | O_CREAT|O_APPEND,0777);
     //cout<<"after"<<endl;
     if (f == 0)
     {
-        dup2(out,1);
-        close(out);
+        dup2(op,1);
+        close(op);
         //cout<<command[1]<<endl;
         execvp(*command,command);
 	exit(0);
     }
    else wait(&st);
-  close(out);
+  close(op);
 }
-int dualoutp(char *str1,char *str2)
+void dualoutp(char *str1,char *str2)
 {
-    int i=1,st;
+    int count=1,st;
     char *temp=strtok(str1," ");
-    char *command[100];
+    char *command[1000];
     command[0]=temp;//cout<<"befor1"<<" "<<str1<<" "<<str2<<endl;
-    while(temp!=NULL)
+    for( ; ; )
     {
+         if(temp==NULL) break;
         temp=strtok(NULL," ");
         if(temp==NULL)
             break;
-        command[i]=temp;
-        i++;
+        command[count]=temp;
+        count++;
     }
-    command[i]=NULL;
-    char *dest=str2;
-    //cout<<dest<<endl;
-    int out;
+    command[count]=NULL;
+    
+    int op;
     int f = fork();
     //cout<<"befor"<<endl;
-    out = open(dest, O_WRONLY|O_APPEND|O_CREAT,0777);
+    op = open(str2, O_WRONLY|O_APPEND|O_CREAT,0777);
     //cout<<"after"<<endl;
     if (f == 0)
-    {dup2(out,1);
-        close(out);
+    {dup2(op,1);
+        close(op);
         //cout<<command[1]<<endl;
         execvp(*command,command);
 	exit(0);
     }
     else wait(&st);
-close(out);
+close(op);
 }
 
